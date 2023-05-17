@@ -1,0 +1,110 @@
+{
+	"common": {
+		"name": "tibber-io",
+		"version": "0.0.1",
+		"news": {
+			"0.0.1": {
+				"en": "initial release",
+				"de": "Erstveröffentlichung",
+				"ru": "Начальная версия",
+				"pt": "lançamento inicial",
+				"nl": "Eerste uitgave",
+				"fr": "Première version",
+				"it": "Versione iniziale",
+				"es": "Versión inicial",
+				"pl": "Pierwsze wydanie",
+				"uk": "Початкова версія",
+				"zh-cn": "首次出版"
+			}
+		},
+		"title": "tibber io",
+		"titleLang": {
+			"en": "tibber io",
+			"de": "Tibber io",
+			"ru": "тиббер ио",
+			"pt": "tibber io",
+			"nl": "tibber io",
+			"fr": "Tibber io",
+			"it": "tibber io",
+			"es": "tiber io",
+			"pl": "tibber io",
+			"uk": "tibber io",
+			"zh-cn": "tibber io"
+		},
+		"desc": {
+			"en": "tibber connection with data analysis",
+			"de": "Tibber-Verbindung mit Datenanalyse",
+			"ru": "связь тиббера с анализом данных",
+			"pt": "tibber conexão com análise de dados",
+			"nl": "tibber verbinding met data-analyse",
+			"fr": "Tibber connexion avec l'analyse des données",
+			"it": "collegamento tibber con l'analisi dei dati",
+			"es": "tiber conexión con análisis de datos",
+			"pl": "połączenie tibbera z analizą danych",
+			"uk": "зв'язок tibber з аналізом даних",
+			"zh-cn": "tibber 与数据分析的联系"
+		},
+		"authors": [
+			"Henrik Markus <LobStaat@gmail.com>"
+		],
+		"keywords": [
+			"tibber",
+			"iot"
+		],
+		"license": "MIT",
+		"platform": "Javascript/Node.js",
+		"main": "main.js",
+		"icon": "tibber-io.png",
+		"enabled": true,
+		"extIcon": "https://raw.githubusercontent.com/LobStaat/ioBroker.tibber-io/master/admin/tibber-io.png",
+		"readme": "https://github.com/LobStaat/ioBroker.tibber-io/blob/master/README.md",
+		"loglevel": "info",
+		"mode": "daemon",
+		"type": "iot-systems",
+		"compact": true,
+		"connectionType": "cloud",
+		"dataSource": "poll",
+		"adminUI": {
+			"config": "materialize"
+		},
+		"eraseOnUpload": true,
+		"dependencies": [
+			{
+				"js-controller": ">=3.3.22"
+			}
+		],
+		"globalDependencies": [
+			{
+				"admin": ">=5.0.0"
+			}
+		]
+	},
+	"native": {
+		"option1": true,
+		"option2": "42"
+	},
+	"objects": [],
+	"instanceObjects": [
+		{
+			"_id": "info",
+			"type": "channel",
+			"common": {
+				"name": "Information"
+			},
+			"native": {}
+		},
+		{
+			"_id": "info.connection",
+			"type": "state",
+			"common": {
+				"role": "indicator.connected",
+				"name": "Device or service connected",
+				"type": "boolean",
+				"read": true,
+				"write": false,
+				"def": false
+			},
+			"native": {}
+		}
+	]
+}
